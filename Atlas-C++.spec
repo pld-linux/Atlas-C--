@@ -72,10 +72,11 @@ Pakiet zawiera statyczne biblioteki Atlas-C++.
 %setup -q
 
 %build
-aclocal
-autoheader
-libtoolize --automake --copy --force
-automake --add-missing --copy --gnu --force
+rm -f missing
+%{__aclocal}
+%{__autoheader}
+%{__libtoolize}
+%{__automake}
 %{__autoconf}
 %configure
 %{__make}
