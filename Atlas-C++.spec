@@ -31,7 +31,8 @@ komunikacyjnej przeznaczonej do systemów WorldForge MMORPG. Bibliotekê
 tê przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
 
 %package devel
-Summary:	Header files and libraries for Atlas-C++ development
+Summary:	Header files for Atlas-C++ development
+Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -62,6 +63,7 @@ u¿ywaj±cych bibliotek Atlas-C++.
 
 %package static
 Summary:	Static libraries for Atlas-C++ development
+Summary(pl):	Statyczne biblioteki Atlas-C++
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -109,10 +111,12 @@ gzip -9nf AUTHORS ChangeLog NEWS README
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%{_libdir}/lib*.so.1
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
