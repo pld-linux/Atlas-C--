@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Atlas-C++ is the current C++ implementation of the Atlas protocol, a
 communications layer designed to be used in the WorldForge MMORPG
 gaming system. This library is suitable for linking to either clients
-or servers.
+xor servers.
 
 %description -l pl
 Atlas-C++ jest implementacj± (w jêzyku C++) protoko³u Atlas, warstwy
