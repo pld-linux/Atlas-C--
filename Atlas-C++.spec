@@ -5,7 +5,7 @@ Version:	0.4.6
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://victor.worldforge.org/pub/worldforge/libs/Atlas-C++/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.worldforge.org/pub/worldforge/libs/Atlas-C++/%{name}-%{version}.tar.bz2
 # Source0-md5:	5ef0a12001d3924baa2742171af31ed3
 BuildRequires:	autoconf
 BuildRequires:	automake
