@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/atlas-config
 %{_includedir}/Atlas
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 %{_libdir}/lib*.so
 %{_aclocaldir}/atlas.m4
 
