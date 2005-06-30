@@ -9,7 +9,7 @@ Source0:	ftp://ftp.worldforge.org/pub/worldforge/libs/Atlas-C++/%{name}-%{versio
 # Source0-md5:	5ef0a12001d3924baa2742171af31ed3
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,7 +28,7 @@ tê przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
 Summary:	Header files for Atlas-C++ development
 Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 
 %description devel
@@ -52,7 +52,7 @@ u¿ywaj±cych bibliotek Atlas-C++.
 Summary:	Static libraries for Atlas-C++ development
 Summary(pl):	Statyczne biblioteki Atlas-C++
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Atlas-C++ is the current C++ implementation of the Atlas protocol, a
@@ -73,12 +73,11 @@ Pakiet zawiera statyczne biblioteki Atlas-C++.
 %setup -q
 
 %build
-rm -f missing
+%{__libtoolize}
 %{__aclocal}
 %{__autoheader}
-%{__libtoolize}
-%{__automake}
 %{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 %{__make}
@@ -103,9 +102,9 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/atlas-config
-%{_includedir}/Atlas*
-%{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
+%{_includedir}/Atlas*
 %{_aclocaldir}/atlas.m4
 %{_pkgconfigdir}/atlascpp*.pc
 
