@@ -1,12 +1,17 @@
+# TODO
+# - compile errors:
+# atlas_convert.cpp: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const'
 Summary:	C++ reference implementation of the Atlas protocol
 Summary(pl):	Implementacja protoko³u Atlas
 Name:		Atlas-C++
-Version:	0.4.6
-Release:	1
+Version:	0.5.98
+Release:	0.1
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://ftp.worldforge.org/pub/worldforge/libs/Atlas-C++/%{name}-%{version}.tar.bz2
-# Source0-md5:	5ef0a12001d3924baa2742171af31ed3
+#Source0:	ftp://ftp.worldforge.org/pub/worldforge/libs/Atlas-C++/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
+# Source0-md5:	7e0c05793bfa16085d3d82dd4a7aed41
+URL:		http://worldforge.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:1.5
