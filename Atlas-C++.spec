@@ -9,8 +9,8 @@ Source0:	ftp://ftp.worldforge.org/pub/worldforge/libs/Atlas-C++/%{name}-%{versio
 # Source0-md5:	5ef0a12001d3924baa2742171af31ed3
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool >= 2:1.5
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,6 +30,7 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
+Requires:	pkgconfig
 
 %description devel
 Atlas-C++ is the current C++ implementation of the Atlas protocol, a
