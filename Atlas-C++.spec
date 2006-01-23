@@ -30,7 +30,6 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
-Requires:	pkgconfig
 
 %description devel
 Atlas-C++ is the current C++ implementation of the Atlas protocol, a
