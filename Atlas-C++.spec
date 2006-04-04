@@ -1,8 +1,11 @@
+# TODO:
+# add tutorial subpackage
+# check if atlas_convert should be in %files and in which package
 Summary:	C++ reference implementation of the Atlas protocol
 Summary(pl):	Implementacja protoko³u Atlas
 Name:		Atlas-C++
 Version:	0.6.0rc2
-Release:	0.1
+Release:	0.2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
@@ -101,11 +104,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/atlas-config
+#%attr(755,root,root) %{_bindir}/atlas-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/Atlas*
-%{_aclocaldir}/atlas.m4
+#%{_aclocaldir}/atlas.m4
 %{_pkgconfigdir}/atlascpp*.pc
 
 %files static
