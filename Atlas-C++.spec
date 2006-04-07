@@ -1,6 +1,6 @@
 # TODO:
 # add tutorial subpackage
-# check if atlas_convert should be in %files and in which package
+# libAtlasFilters.so should be linked with -lz -lbz2
 Summary:	C++ reference implementation of the Atlas protocol
 Summary(pl):	Implementacja protoko³u Atlas
 Name:		Atlas-C++
@@ -10,10 +10,12 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
 # Source0-md5:	4b1d3094f17bb01a9460278897dc17cd
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	bzip2-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -100,17 +102,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_bindir}/atlas_convert
+%attr(755,root,root) %{_libdir}/libAtlas*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/atlas-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libAtlas*.so
+%{_libdir}/libAtlas*.la
 %{_includedir}/Atlas*
-#%{_aclocaldir}/atlas.m4
 %{_pkgconfigdir}/atlascpp*.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libAtlas*.a
