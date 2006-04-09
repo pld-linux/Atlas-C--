@@ -1,0 +1,58 @@
+--- Atlas-C++-0.6.0rc2/Atlas/Filters/Makefile.am.orig	2005-10-18 21:33:28.000000000 +0200
++++ Atlas-C++-0.6.0rc2/Atlas/Filters/Makefile.am	2006-04-09 21:59:38.000000000 +0200
+@@ -4,6 +4,7 @@
+ lib_LTLIBRARIES = libAtlasFilters-0.6.la
+ 
+ libAtlasFilters_0_6_la_LDFLAGS = $(INTERFACE_VERSION)
++libAtlasFilters_0_6_la_LIBADD = $(top_builddir)/Atlas/libAtlas-0.6.la $(OTHER_LIBS)
+ 
+ libAtlasFilters_0_6_la_SOURCES = \
+         Bzip2.cpp Bzip2.h \
+--- Atlas-C++-0.6.0rc2/Atlas/Objects/Makefile.am.orig	2006-04-09 22:04:42.000000000 +0200
++++ Atlas-C++-0.6.0rc2/Atlas/Objects/Makefile.am	2006-04-09 22:06:50.000000000 +0200
+@@ -4,6 +4,7 @@
+ lib_LTLIBRARIES = libAtlasObjects-0.6.la
+ 
+ libAtlasObjects_0_6_la_LDFLAGS = $(INTERFACE_VERSION)
++libAtlasObjects_0_6_la_LIBADD = $(top_builddir)/Atlas/Message/libAtlasMessage-0.6.la $(top_builddir)/Atlas/Codecs/libAtlasCodecs-0.6.la $(top_builddir)/Atlas/libAtlas-0.6.la
+ 
+ REAL_GENERATED_CPP = Root.cpp Decoder.cpp Dispatcher.cpp objectFactory.cpp \
+ 	RootEntity.cpp RootEntityChildren.cpp \
+--- Atlas-C++-0.6.0rc2/Atlas/Codecs/Makefile.am.orig	2005-09-28 21:25:04.000000000 +0200
++++ Atlas-C++-0.6.0rc2/Atlas/Codecs/Makefile.am	2006-04-09 21:58:47.000000000 +0200
+@@ -4,6 +4,7 @@
+ lib_LTLIBRARIES = libAtlasCodecs-0.6.la
+ 
+ libAtlasCodecs_0_6_la_LDFLAGS = $(INTERFACE_VERSION)
++libAtlasCodecs_0_6_la_LIBADD = $(top_builddir)/Atlas/libAtlas-0.6.la
+ 
+ libAtlasCodecs_0_6_la_SOURCES = \
+ 	Utility.cpp XML.cpp Packed.cpp Bach.cpp
+--- Atlas-C++-0.6.0rc2/Atlas/Message/Makefile.am.orig	2003-06-23 18:20:40.000000000 +0200
++++ Atlas-C++-0.6.0rc2/Atlas/Message/Makefile.am	2006-04-09 22:00:27.000000000 +0200
+@@ -4,6 +4,7 @@
+ lib_LTLIBRARIES = libAtlasMessage-0.6.la
+ 
+ libAtlasMessage_0_6_la_LDFLAGS = $(INTERFACE_VERSION)
++libAtlasMessage_0_6_la_LIBADD = $(top_builddir)/Atlas/libAtlas-0.6.la
+ 
+ libAtlasMessage_0_6_la_SOURCES = \
+ 	Element.cpp MEncoder.cpp DecoderBase.cpp QueuedDecoder.cpp
+--- Atlas-C++-0.6.0rc2/Atlas/Net/Makefile.am.orig	2003-06-23 18:20:40.000000000 +0200
++++ Atlas-C++-0.6.0rc2/Atlas/Net/Makefile.am	2006-04-09 22:01:43.000000000 +0200
+@@ -4,6 +4,7 @@
+ lib_LTLIBRARIES = libAtlasNet-0.6.la
+ 
+ libAtlasNet_0_6_la_LDFLAGS = $(INTERFACE_VERSION)
++libAtlasNet_0_6_la_LIBADD = $(top_builddir)/Atlas/Codecs/libAtlasCodecs-0.6.la $(top_builddir)/Atlas/libAtlas-0.6.la
+ 
+ libAtlasNetincludedir = $(includedir)/Atlas-C++-0.6/Atlas/Net
+ 
+--- Atlas-C++-0.6.0rc2/Atlas/Makefile.am.orig	2005-06-15 00:27:49.000000000 +0200
++++ Atlas-C++-0.6.0rc2/Atlas/Makefile.am	2006-04-09 22:11:11.000000000 +0200
+@@ -1,4 +1,4 @@
+-SUBDIRS = Message Codecs Filters Net Objects Funky
++SUBDIRS = . Message Codecs Filters Net Objects Funky
+ 
+ INCLUDES = -I$(top_srcdir)
+ 
