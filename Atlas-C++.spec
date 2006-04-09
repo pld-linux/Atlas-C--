@@ -1,6 +1,5 @@
 # TODO:
 # add tutorial subpackage
-# libAtlasFilters.so should be linked with -lz -lbz2
 Summary:	C++ reference implementation of the Atlas protocol
 Summary(pl):	Implementacja protoko³u Atlas
 Name:		Atlas-C++
@@ -10,6 +9,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
 # Source0-md5:	4b1d3094f17bb01a9460278897dc17cd
+Patch0:		%{name}-link.patch
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
@@ -35,6 +35,7 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
+# libAtlasFilters additionally R: bzip2-devel,zlib-devel
 
 %description devel
 Atlas-C++ is the current C++ implementation of the Atlas protocol, a
@@ -76,6 +77,7 @@ Pakiet zawiera statyczne biblioteki Atlas-C++.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
