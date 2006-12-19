@@ -34,7 +34,7 @@ tê przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
 Summary:	Header files for Atlas-C++ development
 Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	libstdc++-devel
 # libAtlasFilters additionally R: bzip2-devel,zlib-devel
 
@@ -59,7 +59,7 @@ u¿ywaj±cych bibliotek Atlas-C++.
 Summary:	Static libraries for Atlas-C++ development
 Summary(pl):	Statyczne biblioteki Atlas-C++
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Atlas-C++ is the current C++ implementation of the Atlas protocol, a
