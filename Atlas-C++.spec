@@ -3,12 +3,13 @@
 Summary:	C++ reference implementation of the Atlas protocol
 Summary(pl):	Implementacja protoko³u Atlas
 Name:		Atlas-C++
-Version:	0.6.0rc2
+Version:	0.6.0
 Release:	0.2
+Epoch:		1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/worldforge/%{name}-%{version}.tar.bz2
-# Source0-md5:	4b1d3094f17bb01a9460278897dc17cd
+# Source0-md5:	1343d74747a831f2b7b080a51cb4747a
 Patch0:		%{name}-link.patch
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
