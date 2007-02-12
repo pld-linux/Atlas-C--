@@ -2,7 +2,7 @@
 # - compile errors:
 # atlas_convert.cpp: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const'
 Summary:	C++ reference implementation of the Atlas protocol
-Summary(pl):	Implementacja protoko³u Atlas
+Summary(pl.UTF-8):   Implementacja protokoÅ‚u Atlas
 Name:		Atlas-C++
 Version:	0.5.98
 Release:	0.1
@@ -24,14 +24,14 @@ communications layer designed to be used in the WorldForge MMORPG
 gaming system. This library is suitable for linking to either clients
 xor servers.
 
-%description -l pl
-Atlas-C++ jest implementacj± (w jêzyku C++) protoko³u Atlas, warstwy
-komunikacyjnej przeznaczonej do systemów WorldForge MMORPG. Bibliotekê
-tê przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
+%description -l pl.UTF-8
+Atlas-C++ jest implementacjÄ… (w jÄ™zyku C++) protokoÅ‚u Atlas, warstwy
+komunikacyjnej przeznaczonej do systemÃ³w WorldForge MMORPG. BibliotekÄ™
+tÄ™ przygotowano zarÃ³wno dla aplikacji klienckich, jak i serwerÃ³w.
 
 %package devel
 Summary:	Header files for Atlas-C++ development
-Summary(pl):	Pliki nag³ówkowe do biblioteki Atlas-C++
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -45,17 +45,17 @@ or servers.
 This package contains the header files needed to develop programs that
 use these Atlas-C++
 
-%description devel -l pl
-Atlas-C++ jest implementacj± (w jêzyku C++) protoko³u Atlas, warstwy
-komunikacyjnej przeznaczonej do systemów WorldForge MMORPG. Bibliotekê
-tê przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
+%description devel -l pl.UTF-8
+Atlas-C++ jest implementacjÄ… (w jÄ™zyku C++) protokoÅ‚u Atlas, warstwy
+komunikacyjnej przeznaczonej do systemÃ³w WorldForge MMORPG. BibliotekÄ™
+tÄ™ przygotowano zarÃ³wno dla aplikacji klienckich, jak i serwerÃ³w.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych bibliotek Atlas-C++.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych bibliotek Atlas-C++.
 
 %package static
 Summary:	Static libraries for Atlas-C++ development
-Summary(pl):	Statyczne biblioteki Atlas-C++
+Summary(pl.UTF-8):   Statyczne biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -67,10 +67,10 @@ or servers.
 
 This package contains the static Atlas-C++ libraries.
 
-%description static -l pl
-Atlas-C++ jest implementacj± (w jêzyku C++) protoko³u Atlas, warstwy
-komunikacyjnej przeznaczonej do systemów WorldForge MMORPG. Bibliotekê
-tê przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
+%description static -l pl.UTF-8
+Atlas-C++ jest implementacjÄ… (w jÄ™zyku C++) protokoÅ‚u Atlas, warstwy
+komunikacyjnej przeznaczonej do systemÃ³w WorldForge MMORPG. BibliotekÄ™
+tÄ™ przygotowano zarÃ³wno dla aplikacji klienckich, jak i serwerÃ³w.
 
 Pakiet zawiera statyczne biblioteki Atlas-C++.
 
