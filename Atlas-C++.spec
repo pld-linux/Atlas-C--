@@ -1,7 +1,7 @@
 # TODO:
 # add tutorial subpackage
 Summary:	C++ reference implementation of the Atlas protocol
-Summary(pl.UTF-8):   Implementacja protokołu Atlas
+Summary(pl.UTF-8):	Implementacja protokołu Atlas
 Name:		Atlas-C++
 Version:	0.6.0
 Release:	0.2
@@ -32,7 +32,7 @@ tę przygotowano zarówno dla aplikacji klienckich, jak i serwerów.
 
 %package devel
 Summary:	Header files for Atlas-C++ development
-Summary(pl.UTF-8):   Pliki nagłówkowe do biblioteki Atlas-C++
+Summary(pl.UTF-8):	Pliki nagłówkowe do biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	libstdc++-devel
@@ -57,7 +57,7 @@ używających bibliotek Atlas-C++.
 
 %package static
 Summary:	Static libraries for Atlas-C++ development
-Summary(pl.UTF-8):   Statyczne biblioteki Atlas-C++
+Summary(pl.UTF-8):	Statyczne biblioteki Atlas-C++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
